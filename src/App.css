@@ -1,38 +1,102 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;800&display=swap');
+
+html{
+  font-size: 62.5%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+  font-family: 'Inter', sans-serif;
+}
+*, *::after, *::before{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+ul, li{
+  list-style: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+a{
+  text-decoration: none;
+}
+
+.loading{
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+
+.header{
   display: flex;
-  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.main{
+  padding: 1rem 3rem;
+}
+
+.random--btn{
+  width: 100%;
+  font-size: 1.5rem;
+  font-weight: 300;
+  display: flex;
+  justify-content: flex-end;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.icon{
+  margin-left: .5rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.container{
+ display: grid;
+ place-items: center;
+ height: 100vh;
+}
+
+.quote{
+  width: 100%;
+  max-width: 40rem;
+}
+
+.quote-text{
+  font-size: 1.6rem;
+  border-left: 3px solid rgb(212, 145, 0);
+  padding:  0 2rem;
+  font-weight: 500;
+  margin-bottom: 3rem;
+}
+.quote-details{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+  background-color: #242424;
+  padding: 2.5rem 0;
+  margin: 0 2rem;
+  color: #fff;
+}
+.quote-author{
+  margin-left: 1rem;
+  font-size: 1.2rem;
+  font-weight: 200;
+  color: #fff;
+}
+.quote-details h6{
+  font-size: 1rem;
+  margin-left: 1rem;
+  font-weight: 100;
+}
+
+.quote-details__icon{
+  margin-right: 1rem;
+}
+
+.author-text{
+  margin: 3rem 0;
+}
+
+.wrapper{
+  
 }
