@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react'
+import React, {useEffect, useState, useRef} from 'react'
 import { useHistory } from 'react-router';
 import { VscSync } from "react-icons/vsc";
 
@@ -6,8 +6,9 @@ const Author = () => {
     const history = useHistory();
     const author = history.location.pathname.split("/")[1];
     const [allQuotes, setAllQuotes] = useState([])
-    // console.log(author)
-    const fetchData = async ()=>{
+    const fetchData = useRef(null)
+
+    fetchData.current = async ()=>{
         const data = await fetch('https://quote-garden.herokuapp.com/api/v3/quotes?author='+author)
         const {data: newQuotes} = await data.json()
         console.log(newQuotes)
@@ -19,7 +20,7 @@ const Author = () => {
     }
 
     useEffect(() => {
-        fetchData()
+        fetchData.current()
     }, [])
 
     if(allQuotes.length===0) return <div className="loading"><h1>Loading...</h1></div>
